@@ -1,6 +1,16 @@
 import "./styles.css";
 
-function Menu(props) {
+interface PropsInterface {
+  items: ReadonlyArray<{
+    id: number;
+    link: string;
+    title: string;
+  }>;
+  type: number;
+}
+
+function Menu(props: PropsInterface) {
+  console.log(props.type);
   const htmlItems = props.items.map((item) => (
     <li key={item.id} className="menu__item">
       <a className="menu__link" href={item.link}>

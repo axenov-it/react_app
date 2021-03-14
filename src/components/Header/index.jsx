@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header__wrap">
-        <Menu items={menuItems} type="vertical" />
+        <Menu items={menuItems} />
       </div>
     </header>
   );
