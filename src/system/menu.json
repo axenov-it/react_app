@@ -1,0 +1,8 @@
+[
+  { "id": "1", "title": "Home", "link": "/" },
+  { "id": "2", "title": "Contacts", "link": "/contacts" },
+  { "id": "3", "title": "About us", "link": "/about" },
+  { "id": "4", "title": "Gallery", "link": "/gallery" },
+  { "id": "5", "title": "Catalog", "link": "/catalog" },
+  { "id": "6", "title": "Payment", "link": "/payment" }
+]
