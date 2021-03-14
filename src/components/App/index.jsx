@@ -1,8 +1,8 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Page from "./Page";
+import Footer from "../Footer";
+import Header from "../Header";
+import Page from "../Page";
 
-import "./app.css";
+import "./styles.css";
 
 function App() {
   return (
