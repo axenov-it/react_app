@@ -1,0 +1,14 @@
+.menu  {
+    display: flex;
+}
+
+.menu__link {
+    display: block;
+    padding: 5px 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+}

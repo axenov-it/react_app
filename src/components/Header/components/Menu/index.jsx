@@ -4,19 +4,29 @@ function Menu() {
   return (
     <ul className="menu">
       <li className="menu__item">
-        <a href="#">Home</a>
+        <a className="menu__link" href="#">
+          Home
+        </a>
       </li>
       <li className="menu__item">
-        <a href="#">About us</a>
+        <a className="menu__link" href="#">
+          About us
+        </a>
       </li>
       <li className="menu__item">
-        <a href="#">Gallery</a>
+        <a className="menu__link" href="#">
+          Gallery
+        </a>
       </li>
       <li className="menu__item">
-        <a href="#">Contacts</a>
+        <a className="menu__link" href="#">
+          Contacts
+        </a>
       </li>
       <li className="menu__item">
-        <a href="#">Catalog</a>
+        <a className="menu__link" href="#">
+          Catalog
+        </a>
       </li>
     </ul>
   );
