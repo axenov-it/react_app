@@ -1,4 +1,6 @@
-body, ul, p {
+body,
+ul,
+p {
   margin: 0;
   padding: 0;
 }
@@ -9,4 +11,8 @@ a {
 
 li {
   list-style: none;
+}
+
+* {
+  box-sizing: border-box;
 }
