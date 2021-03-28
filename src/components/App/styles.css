@@ -16,3 +16,11 @@ li {
 * {
   box-sizing: border-box;
 }
+
+.page {
+  max-width: 800px;
+  margin: 15px auto;
+  min-height: 600px;
+  box-shadow: 0 0 2px 1px #0000007d;
+  padding: 15px;
+}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./styles.css";
 
 interface PropsInterface {
@@ -6,15 +8,14 @@ interface PropsInterface {
     link: string;
     title: string;
   }>;
-  type: number;
 }
 
 function Menu(props: PropsInterface) {
   const htmlItems = props.items.map((item) => (
     <li key={item.id} className="menu__item">
-      <a className="menu__link" href={item.link}>
+      <Link className="menu__link" to={item.link}>
         {item.title}
-      </a>
+      </Link>
     </li>
   ));
 

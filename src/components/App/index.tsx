@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+
 import Footer from "../Footer";
 import Header from "../Header";
-import Page from "../Page";
+import Router from "../Router";
 
 import "./styles.css";
 
 function App() {
-  console.log("RENDER APP");
-
   return (
-    <div className="app">
-      <Header />
-      <Page />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
+        <main className="page">
+          <Router />
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
