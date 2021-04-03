@@ -1,0 +1,25 @@
+.slider,
+.slider__img {
+  width: 100%;
+  max-height: 300px;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider__btnRight,
+.slider__btnLeft {
+  position: absolute;
+  height: 50px;
+  cursor: pointer;
+  top: 43%;
+}
+
+.slider__btnLeft {
+  left: 5px;
+}
+
+.slider__btnRight {
+  right: 5px;
+}

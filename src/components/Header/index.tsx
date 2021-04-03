@@ -4,7 +4,6 @@ import menuItems from "system/menu";
 import "./styles.css";
 
 function Header() {
-  console.log("RENDER HEADER");
   return (
     <header className="header">
       <div className="header__wrap">
