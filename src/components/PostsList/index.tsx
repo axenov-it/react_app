@@ -13,7 +13,6 @@ function PostsList() {
 
   return (
     <div className={styles.posts}>
-      <h2>Posts</h2>
       {posts.map((post: PostInterface) => (
         <Post key={post.id} data={post} />
       ))}
