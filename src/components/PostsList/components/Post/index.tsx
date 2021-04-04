@@ -5,10 +5,10 @@ interface PropsInterface {
   data: PostInterface;
 }
 
-const Post = ({ data: { title, short_desctiption } }: PropsInterface) => (
+const Post = ({ data: { title, short_description } }: PropsInterface) => (
   <section className={styles.post}>
     <h3 className={styles.post__title}>{title}</h3>
-    <p className={styles.post__description}>{short_desctiption}</p>
+    <p className={styles.post__description}>{short_description}</p>
   </section>
 );
 
