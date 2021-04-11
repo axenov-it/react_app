@@ -1,5 +1,5 @@
-import Slider from "../../Slider";
-import PostsList from "../../PostsList";
+import Slider from "../../modules/Slider";
+import PostsList from "../../modules/PostsList";
 import styles from "./styles.module.css";
 
 function Home() {

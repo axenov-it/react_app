@@ -1,9 +1,9 @@
 import { createContext } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import Footer from "../Footer";
-import Header from "../Header";
-import Router from "../Router";
+import Footer from "../static/Footer";
+import Header from "../static/Header";
+import Router from "system/Router";
 
 import "./styles.css";
 
