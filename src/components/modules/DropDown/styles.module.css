@@ -1,0 +1,29 @@
+.menu {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-align: right;
+}
+
+.menu__show {
+  cursor: pointer;
+}
+
+.menu__list {
+  text-align: left;
+  background: white;
+  box-shadow: 0 0 5px 2px #00000038;
+  padding: 8px 0;
+}
+
+.menu__btn,
+.menu__link {
+  cursor: pointer;
+  padding: 5px 15px;
+  display: block;
+}
+
+.menu__btn:hover,
+.menu__link:hover {
+  background: #dddddd5c;
+}

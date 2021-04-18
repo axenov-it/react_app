@@ -4,6 +4,7 @@
   min-height: 200px;
   text-align: center;
   margin: 8px 0;
+  position: relative;
 }
 
 .post__title {
