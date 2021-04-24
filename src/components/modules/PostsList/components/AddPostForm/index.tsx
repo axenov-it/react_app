@@ -1,17 +1,24 @@
 import { GrClose } from "react-icons/gr";
 
 import styles from "./styles.module.css";
-import { PostInterface } from "../../interfaces";
 import { useState } from "react";
+import {
+  FieldsPostFormInterface,
+  ErrorsPostFormInterface,
+} from "../../interfaces";
 
 interface PropsInterface {
   onClose: () => void;
+  createPost: (fields: FieldsPostFormInterface, errors: any) => void;
 }
 
-const AddPostForm = ({ onClose }: PropsInterface) => {
-  const [fields, setFields] = useState({ title: "", short_description: "" });
+const AddPostForm = ({ onClose, createPost }: PropsInterface) => {
+  const [fields, setFields] = useState<FieldsPostFormInterface>({
+    title: "",
+    short_description: "",
+  });
 
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<ErrorsPostFormInterface>({
     title: false,
     short_description: false,
   });
@@ -25,7 +32,7 @@ const AddPostForm = ({ onClose }: PropsInterface) => {
     const key = event.target.name;
     const value = event.target.value;
 
-    if (key === "title" && !/^[a-zA-Zа-яА-Я\s]{1,15}$/.test(value)) {
+    if (key === "title" && !/^[a-zA-Zа-яА-Я0-9\s]{0,15}$/.test(value)) {
       setErrors({ ...errors, [key]: true });
       return;
     } else {
@@ -73,7 +80,12 @@ const AddPostForm = ({ onClose }: PropsInterface) => {
           </span>
         )}
 
-        <button className={styles.form__btn}>Создать</button>
+        <button
+          onClick={() => createPost(fields, errors)}
+          className={styles.form__btn}
+        >
+          Создать
+        </button>
       </form>
     </div>
   );
