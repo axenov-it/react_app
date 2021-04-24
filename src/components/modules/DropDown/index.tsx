@@ -10,8 +10,9 @@ interface PropsInterface {
     type: "btn" | "link";
     to?: string;
     text: string;
+    data?: any;
   }>;
-  onClick?: (e: any) => void;
+  onClick?: (data: any) => void;
 }
 
 function DropDown({ items, onClick }: PropsInterface) {
@@ -26,10 +27,13 @@ function DropDown({ items, onClick }: PropsInterface) {
       <RiEditBoxLine onClick={onMenuClick} className={styles.menu__show} />
       {active ? (
         <ul className={styles.menu__list}>
-          {items.map(({ id, text, type, to = "" }) =>
+          {items.map(({ id, text, type, to = "", data }) =>
             type === "btn" ? (
               <li className={styles.menu__item} key={id}>
-                <span className={styles.menu__btn} onClick={onClick}>
+                <span
+                  className={styles.menu__btn}
+                  onClick={() => onClick && onClick(data)}
+                >
                   {text}
                 </span>
               </li>

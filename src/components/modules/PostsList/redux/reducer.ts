@@ -14,14 +14,22 @@ const postsListReducer = (
   state: StateInterface = initialState,
   action: any
 ) => {
-  if (action.type === "postsList/SET_POSTS") {
-    return {
-      ...state,
-      posts: action.payload,
-    };
-  }
+  switch (action.type) {
+    case "postsList/SET_POSTS":
+      return {
+        ...state,
+        posts: action.payload,
+      };
 
-  return state;
+    case "postsList/SET_POST":
+      return {
+        ...state,
+        posts: [action.payload, ...state.posts],
+      };
+
+    default:
+      return state;
+  }
 };
 
 export default postsListReducer;

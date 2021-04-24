@@ -4,10 +4,12 @@ import DropDown from "components/modules/DropDown";
 
 interface PropsInterface {
   data: PostInterface;
+  deletePost: (data: { postId: number }) => void;
 }
 
 const Post = ({
   data: { id, title, short_description, date_update },
+  deletePost,
 }: PropsInterface) => {
   const date = new Date(date_update.date);
 
@@ -25,8 +27,10 @@ const Post = ({
             id: 2,
             type: "btn",
             text: "Удалить",
+            data: { postId: id },
           },
         ]}
+        onClick={deletePost}
       />
       <span className={styles.post__date}>{date.toLocaleDateString()}</span>
       <h3 className={styles.post__title}>{title}</h3>
