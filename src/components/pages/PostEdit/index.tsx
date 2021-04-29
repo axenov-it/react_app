@@ -1,12 +1,13 @@
 import { useParams } from "react-router";
+import EditPostForm from "components/modules/EditPostForm";
 import "./styles.css";
 
 function PostEdit() {
   const { postId }: { postId: string } = useParams();
 
   return (
-    <div className="contacts">
-      <h2>PostEdit {postId}</h2>
+    <div>
+      <EditPostForm postId={postId} />
     </div>
   );
 }
